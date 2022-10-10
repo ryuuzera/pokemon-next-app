@@ -1,0 +1,87 @@
+.Container {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  backdrop-filter: blur(12px);
+  border-bottom: 1.9px solid rgba(248, 238, 211, 0.4);
+}
+
+.HeaderLeft {
+  display: inline-flex;
+  flex-direction: row;
+  color: rgb(248, 238, 211);
+  width: 30%;
+  height: 100%;
+  align-items: center;
+}
+
+.HeaderLeft .icon {
+  margin-left: 1.3rem;
+  font-size: 1.4rem;
+}
+
+.HeaderLeft .nickName {
+  font-size: 1.4rem;
+  margin: 0 0 0 5px;
+  align-self: center;
+}
+
+.HeaderCenter {
+  display: flex;
+  flex-direction: row;
+  min-width: 400px;
+  max-width: 400px;
+  background: rgb(248, 238, 211);
+  border-radius: 0 0 32px 32px;
+  width: 25%;
+  height: 115%;
+  gap: 25px;
+  justify-content: center;
+}
+.HeaderRight {
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  justify-content: flex-end;
+
+}
+
+.HeaderRight .buyCoffe{
+  padding: 5px 1.5rem 5px 1.5rem;
+  background: linear-gradient(90deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0.0) 100%);
+  color: rgb(248, 238, 211);
+  margin-right: 1.5rem;
+  border-top: 1px solid rgba(248, 238, 211, 0.232);
+  border-bottom: 1px solid rgba(248, 238, 211, 0.232);
+  border-style: groove;
+}
+
+.HeaderItem {
+  cursor: pointer;
+  transition: 0.4s;
+  min-width: 64px;
+  border-radius: 0 0 15px 15px;
+  justify-content: center;
+  align-items: center;
+  height: 110%;
+  width: 15%;
+  background: rgb(37, 56, 73);
+  border: 2px solid rgb(248, 238, 211);
+  -webkit-box-shadow: 10px 10px 18px 3px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 10px 10px 18px 3px rgba(0, 0, 0, 0.37);
+  box-shadow: 10px 10px 18px 3px rgba(0, 0, 0, 0.37);
+}
+.HeaderItem:hover {
+  background: rgb(47, 73, 97);  
+  transition: 0.4s;
+}
+
+.HeaderItem .icon {
+  color: rgb(248, 238, 211);
+  font-size: 2.5rem;
+}

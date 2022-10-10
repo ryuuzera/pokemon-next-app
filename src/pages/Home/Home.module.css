@@ -1,0 +1,125 @@
+.Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100vw;
+  background: rgba(0,0,0,0.5)
+}
+
+.Menu { 
+  height: 85%;
+  width: 95%;
+  display: flex;
+  margin-top: 4%;
+  flex-direction: row;
+  /* background-color: rgba(226, 226, 177, 0.3); */
+}
+.MenuLeft {
+  background-color: rgba(0, 17, 0, 0.15);
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuLeftCard {
+  height: 95%;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* background-color: rgba(222, 184, 135, 0.301); */
+}
+
+.MenuLeft .menuLeftCard .listTitle {
+  background-color: rgba(230, 208, 159, 0.253);
+  height: 12%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuLeftCard .backgroundTitle {
+  background-image: url('../../../public/images/pokeball.png'); 
+  background-position: center;
+  background-size: 20%;
+  background-repeat: no-repeat; 
+  width: 90%;
+  height: 65%;
+}
+
+.menuLeftCard .backgroundTitle .title {
+  z-index: unset;
+  color: rgba(248, 238, 211, 0.6);
+  border-radius: 8px;
+  border: 2px solid rgba(248, 238, 211, 0.2);
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.267);
+  
+
+}
+
+.MenuLeft .menuLeftCard .listPokemon {
+  /* background-color: rgba(204, 204, 204, 0.153); */
+  height: 72%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuLeftCard .pokemons {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 95%;
+  width: 95%;
+  /* background: rgba(255, 0, 0, 0.123); */
+}
+.pokemonItem {
+  height: 25%;
+  width: 20%;
+  background: rgba(135, 135, 218, 0.162);
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.pokemonItem .pokemonName {
+  color: rgba(248, 238, 211, 0.9);
+  position: relative;
+  top: -25px;
+  left: -20px;
+}
+.pokemonImg {
+  margin-top: 25px;
+  height: 60%;
+  width: 60%;
+  background: rgba(33, 35, 34);
+  padding: 5px;
+  /* border: 1px solid rgba(248, 238, 211, 0.24);; */
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemonImg img {
+  height: 100%;
+  width: 100%;
+}
+
+
+.MenuLeft .menuLeftCard .listFooter {
+  /* background-color: rgba(230, 200, 28, 0.253); */
+  height: 16%;
+  width: 100%;
+  align-items: center;
+}
+
+.MenuRight {
+  background-color: rgba(255, 0, 149, 0.185);
+  width: 50%;
+  height: 100%;
+}
