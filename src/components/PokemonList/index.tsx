@@ -1,21 +1,23 @@
 /* eslint-disable  */
 import { Stack, Typography } from '@mui/material';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 import Api from '../../api/axios';
 import styles from './PokemonList.module.css';
 
-export const PokemonList = () => {
+const PokemonList = (props: any) => {
   const [objA, setObjA]: any = useState([]);
   useEffect(() => {
-    setObjA([]);
-    for (let i = 1; i < 152; i++) {
-      Api.get(`/pokemon/${i}`)
+    const fetchPokemon = async (index: number) => {
+      await Api.get(`/pokemon/${index}`)
         .then((response) => {
-          setObjA((objA: any) => [...objA, response.data]);
+           setObjA((objA: any) => [...objA, response.data]);
         })
         .catch((err) => {
           console.log(err);
         });
+    };
+    for (let i = 1; i < 152; i++) {
+      fetchPokemon(i);
     }
   }, []);
 
@@ -23,7 +25,13 @@ export const PokemonList = () => {
     <>
       {objA.map((obj: any, id: any) => {
         return (
-          <Stack key={obj.id} className={styles.pokemonItem} onClick={() => alert(obj.name)}>
+          <Stack
+            key={obj.id}
+            id={id}
+            className={styles.pokemonItem}
+            sx={obj.name === 'mew' ? { display: props.mew ? 'normal' : 'none' } : { display: 'normal' }}
+            onClick={() => alert(obj.name)}
+          >
             <Stack className={styles.pokemonImgOuter}>
               <Stack className={styles.pokemonImg}>
                 <img
@@ -47,3 +55,5 @@ export const PokemonList = () => {
     </>
   );
 };
+
+export default memo(PokemonList);

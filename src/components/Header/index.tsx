@@ -5,8 +5,22 @@ import { GiHandBag } from 'react-icons/gi';
 import { AiOutlineIdcard } from 'react-icons/ai'
 import { FaWifi, FaShoppingBag } from 'react-icons/fa'
 import { IoMdSettings } from 'react-icons/io';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-export const Header = () => {
+export const Header = (props: any) => {
+  const handleMewClick = () => {
+    props.setMew(true);
+    toast(' A Wild Mew appared!', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      progress: undefined,
+      theme: "dark",
+      });
+  }
   return (
     <>
       <Stack className={styles.Container}>
@@ -32,8 +46,10 @@ export const Header = () => {
         </Stack>
         <Stack className={styles.HeaderRight}>
         <Typography 
+        sx={{cursor: 'pointer'}}
+        onClick={handleMewClick}
         className={styles.buyCoffe}>
-          Buy me a Coffe</Typography>
+          Buy mew a Coffe</Typography>
         </Stack>
       </Stack>
     </>
