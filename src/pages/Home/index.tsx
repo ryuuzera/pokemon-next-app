@@ -3,8 +3,10 @@ import { Stack, Typography } from '@mui/material';
 import { Header } from '../../components/Header';
 import { PokemonList } from '../../components/PokemonList';
 import styles from './Home.module.css';
+import {useState} from 'react';
 
 export const Home = () => {
+  
   return (
     <>
       <Header />
