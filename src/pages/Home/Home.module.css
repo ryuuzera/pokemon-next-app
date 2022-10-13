@@ -5,10 +5,10 @@
   justify-content: center;
   height: 100%;
   width: 100vw;
-  background: rgba(0,0,0,0.5)
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.Menu { 
+.Menu {
   height: 85%;
   width: 95%;
   display: flex;
@@ -17,7 +17,7 @@
   /* background-color: rgba(226, 226, 177, 0.3); */
 }
 .MenuLeft {
-  background-color: rgba(0, 17, 0, 0.15);
+  /* background-color: rgba(0, 17, 0, 0.15); */
   width: 50%;
   height: 100%;
   align-items: center;
@@ -34,7 +34,7 @@
 }
 
 .MenuLeft .menuLeftCard .listTitle {
-  background-color: rgba(230, 208, 159, 0.253);
+  /* background-color: rgba(230, 208, 159, 0.253); */
   height: 12%;
   width: 100%;
   align-items: center;
@@ -42,10 +42,10 @@
 }
 
 .menuLeftCard .backgroundTitle {
-  background-image: url('../../../public/images/pokeball.png'); 
+  background-image: url('../../../public/images/pokeball.png');
   background-position: center;
   background-size: 20%;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   width: 90%;
   height: 65%;
 }
@@ -59,8 +59,6 @@
   justify-content: center;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.267);
-  
-
 }
 
 .MenuLeft .menuLeftCard .listPokemon {
@@ -69,6 +67,7 @@
   width: 100%;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
 }
 
 .menuLeftCard .pokemons {
@@ -80,36 +79,52 @@
   /* background: rgba(255, 0, 0, 0.123); */
 }
 .pokemonItem {
+  cursor: pointer;
   height: 25%;
   width: 20%;
-  background: rgba(135, 135, 218, 0.162);
   align-items: center;
   justify-content: center;
   border-radius: 8px;
 }
+
 .pokemonItem .pokemonName {
   color: rgba(248, 238, 211, 0.9);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0) 100%);
   position: relative;
-  top: -25px;
+  top: -15px;
   left: -20px;
 }
 .pokemonImg {
-  margin-top: 25px;
-  height: 60%;
-  width: 60%;
+  height: 90%;
+  width: 90%;
   background: rgba(33, 35, 34);
-  padding: 5px;
-  /* border: 1px solid rgba(248, 238, 211, 0.24);; */
+  border: 1px solid rgba(248, 238, 211, 0.24);
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+}
+.pokemonImgOuter {
+  justify-content: center;
+  align-items: center;
+  background: rgba(33, 35, 34);
+  border-radius: 50%;
+  margin-top: 25px;
+  height: 70%;
+  width: 65%;
+  transition: 0.2s;
+}
+
+.pokemonImgOuter:hover {
+  cursor: pointer;
+  height:80%;
+  width: 75%;
+  transition: 0.2s;
 }
 
 .pokemonImg img {
   height: 100%;
   width: 100%;
 }
-
 
 .MenuLeft .menuLeftCard .listFooter {
   /* background-color: rgba(230, 200, 28, 0.253); */
@@ -119,7 +134,7 @@
 }
 
 .MenuRight {
-  background-color: rgba(255, 0, 149, 0.185);
+  /* background-color: rgba(255, 0, 149, 0.185); */
   width: 50%;
   height: 100%;
 }

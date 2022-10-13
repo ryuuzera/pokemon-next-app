@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Stack, Typography } from '@mui/material';
 import { Header } from '../../components/Header';
+import { PokemonList } from '../../components/PokemonList';
 import styles from './Home.module.css';
 
 export const Home = () => {
@@ -20,60 +21,7 @@ export const Home = () => {
               </Stack>
               <Stack className={styles.listPokemon}>
                 <Stack className={styles.pokemons}>
-                  <Stack className={styles.pokemonItem}>
-                    <Stack className={styles.pokemonImg}>
-                      <img src='http://play.pokemonshowdown.com/sprites/xyani/charizard.gif' />
-                    </Stack>
-                    <Stack className={styles.pokemonName}>
-                      <Typography sx={{ fontSize: '1.2rem' }}>Charizard</Typography>
-                    </Stack>
-                  </Stack>
-
-                  <Stack className={styles.pokemonItem}>
-                    <Stack className={styles.pokemonImg}>
-                      <img src='http://play.pokemonshowdown.com/sprites/xyani/charizard.gif' />
-                    </Stack>
-                    <Stack className={styles.pokemonName}>
-                      <Typography sx={{ fontSize: '1.2rem' }}>Charizard</Typography>
-                    </Stack>
-                  </Stack>
-
-                  
-                  <Stack className={styles.pokemonItem}>
-                    <Stack className={styles.pokemonImg}>
-                      <img src='http://www.pkparaiso.com/imagenes/xy/sprites/animados/charmander.gif' />
-                    </Stack>
-                    <Stack className={styles.pokemonName}>
-                      <Typography sx={{ fontSize: '1.2rem' }}>Charizard</Typography>
-                    </Stack>
-                  </Stack>
-
-                  <Stack className={styles.pokemonItem}>
-                    <Stack className={styles.pokemonImg}>
-                      <img src='http://play.pokemonshowdown.com/sprites/xyani/pikachu.gif' />
-                    </Stack>
-                    <Stack className={styles.pokemonName}>
-                      <Typography sx={{ fontSize: '1.2rem' }}>Charizard</Typography>
-                    </Stack>
-                  </Stack>
-
-                  <Stack className={styles.pokemonItem}>
-                    <Stack className={styles.pokemonImg}>
-                      <img src='http://play.pokemonshowdown.com/sprites/xyani/bulbasaur.gif' />
-                    </Stack>
-                    <Stack className={styles.pokemonName}>
-                      <Typography sx={{ fontSize: '1.2rem' }}>Charizard</Typography>
-                    </Stack>
-                  </Stack>
-
-                  <Stack className={styles.pokemonItem}>
-                    <Stack className={styles.pokemonImg}>
-                      <img src='http://play.pokemonshowdown.com/sprites/xyani/charmander.gif' />
-                    </Stack>
-                    <Stack className={styles.pokemonName}>
-                      <Typography sx={{ fontSize: '1.2rem' }}>Charizard</Typography>
-                    </Stack>
-                  </Stack>
+                  <PokemonList />
                 </Stack>
               </Stack>
               <Stack className={styles.listFooter}></Stack>

@@ -1,0 +1,48 @@
+.pokemonItem {
+  cursor: pointer;
+  height: 25%;
+  width: 20%;
+  /* background: rgba(135, 135, 218, 0.162); */
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.pokemonItem .pokemonName {
+  color: rgba(248, 238, 211, 0.9);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0) 100%);
+  position: relative;
+  top: -15px;
+  left: 0;
+}
+.pokemonImg {
+  height: 90%;
+  width: 90%;
+  background: rgba(33, 35, 34);
+  border: 1px solid rgba(248, 238, 211, 0.24);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.pokemonImgOuter {
+  justify-content: center;
+  align-items: center;
+  background: rgba(33, 35, 34);
+  border-radius: 50%;
+  margin-top: 25px;
+  height: 70%;
+  width: 65%;
+  transition: 0.2s;
+}
+
+.pokemonImgOuter:hover {
+  cursor: pointer;
+  height:80%;
+  width: 75%;
+  transition: 0.2s;
+}
+
+.pokemonImg img {
+  height: 100%;
+  width: 100%;
+}
