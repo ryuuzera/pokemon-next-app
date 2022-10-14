@@ -2,7 +2,8 @@
 import { Stack, Typography } from '@mui/material';
 import { Chart as ChartJS, Filler, Legend, LineElement, PointElement, RadialLinearScale, Tooltip } from 'chart.js';
 import { useState } from 'react';
-import { Radar } from 'react-chartjs-2';
+import RadarChart from 'react-svg-radar-chart';
+// import 'react-svg-radar-chart/build/css/index.css';
 import { Header } from '../../components/Header';
 import PokemonList from '../../components/PokemonList';
 import styles from './Home.module.css';
@@ -10,34 +11,26 @@ import styles from './Home.module.css';
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
 export const Home = () => {
-  const data = {
-    labels: ['HP', 'Attack', 'Defense', 'Special Attack', 'Special Defense', 'Speed'],
-    datasets: [
-      {
-        label: 'Base Stats',
-        data: [75, 100, 95, 40, 70, 110],
-        fill: true,
-        backgroundColor: 'rgba(212, 17, 17, 0.2)',
-        borderWidth: 2,
-        borderColor: 'rgb(204, 39, 39)',
-        pointBackgroundColor: 'rgb(209, 28, 28)',
-        pointBorderColor: '#8d3c3c',
-        pointHoverBackgroundColor: '#d32727',
-        pointHoverBorderColor: 'rgb(255, 99, 132)',
-        showLabelBackdrop: false,
+  const data = [
+    {
+      data: {
+        HP: 0.2,
+        Attack: 0.4,
+        Defense: 0.244,
+        SpecialAttack: 0.67,
+        SpecialDefense: 0.45,
+        Speed: 1,
       },
-    ],
-  };
-  const options = {
-    scale: {
-      major: {
-        enabled: true,
-      },
-      backdropColor: 'rgba(0, 0, 0, 0)',
-      showLabelBackdrop: false,
-      max: 255,
-      min: 0,
+      meta: { color: 'rgb(11, 95, 173)' },
     },
+  ];
+  const captions = {
+    HP: 'HP',
+    Attack: 'Attack',
+    Defense: 'Defense',
+    SpecialAttack: 'Special Attack',
+    SpecialDefense: 'Special Defense',
+    Speed: 'Speed',
   };
 
   const [mew, setMew] = useState(false);
@@ -83,12 +76,66 @@ export const Home = () => {
             </Stack>
             <Stack className={styles.pokemonInfoDiv}>
               <Stack className={styles.pokemonInfoChart}>
-                {
-                  //tsignore
-                  <Radar datasetIdKey='1' data={data} options={options} />
-                }
+                <RadarChart captions={captions} data={data} size={400} />
               </Stack>
-              <Stack className={styles.pokemonInfoMisc}></Stack>
+              <style jsx global>
+                {`
+                  .shape {
+                    fill-opacity: 0.5;
+                    cursor: pointer;
+                  }
+                  .shape:hover {
+                    fill-opacity: 0.65;
+                  }
+                  .scale {
+                    fill: rgba(126, 119, 99, 0.4);
+                    stroke: #25242499;
+                    stroke-width: 2px;
+                  }
+                  .axis {
+                    stroke: #25242499;
+                    stroke-width: 2px;
+                  }
+                  .caption {
+                    fill: rgba(226, 219, 199, 0.9);
+                    font-size: 1.25rem;
+                    font-weight: 300;
+                  }
+                  #infoOne {
+                    transition: all 0.4s;
+                    background: #ae5afc97;
+                    height: 80%;
+                    width: 45%;
+                  }
+                  #infoTwo {
+                    background: #1a98a1;
+                    transition: all 0.4s;
+                    height: 80%;
+                    width: 45%;
+                  }
+                `}
+              </style>
+              <Stack className={styles.pokemonInfoMisc}>
+                <Stack className={styles.pokemonInfoDesc}>
+                  <Typography sx={{ color: 'rgba(226, 219, 199,0.9)', fontSize: '0.8rem' }}>
+                    Said to rest quietly in an undiscovered cave, this POKéMON was created solely for battling.
+                  </Typography>
+                </Stack>
+                <Stack className={styles.pokemonInfoTypes}>
+                  <Stack id='infoOne' className={styles.pokemonInfoTypeEach}>
+                    <Typography sx={{ color: 'rgba(226, 219, 199,0.9)', fontSize: '1.5rem', display: 'normal'}}>
+                      Psychic
+                    </Typography>
+                  </Stack>
+
+                  <Stack id='infoTwo' className={styles.pokemonInfoTypeEach}>
+                  <Typography sx={{ color: 'rgba(226, 219, 199,0.9)', fontSize: '1.5rem', display: 'normal'}}>
+                      Flying
+                    </Typography>
+                  </Stack>
+                </Stack>
+                <Stack className={styles.pokemonInfoGap}></Stack>
+              </Stack>
             </Stack>
           </Stack>
         </Stack>

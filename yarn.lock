@@ -571,6 +571,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-svg-radar-chart@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@types/react-svg-radar-chart/-/react-svg-radar-chart-1.2.3.tgz#a0532aee5b5dc616e0b6e76965fc41c791fc57fd"
+  integrity sha512-M1P7swGEJ9xB3YDNVlxUqeXCL3iqxj0ECpuMgoDWsFbD7O8PQGp3GshyI7TpbYNUFaa6cnKtZu+OiW+vOf5m4g==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-transition-group@^4.4.5":
   version "4.4.5"
   resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.5.tgz#aae20dcf773c5aa275d5b9f7cdbca638abc5e416"
@@ -2104,6 +2111,11 @@ react-is@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
+
+react-svg-radar-chart@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/react-svg-radar-chart/-/react-svg-radar-chart-1.4.0.tgz#9c47a9def325c9727364a60d9b4ac870d546630a"
+  integrity sha512-flOJQrVOq7SqNMooWPrsgJqN8Lx/BedQoGHDIgdmmpJS0i2P7WJK6u8JeDA8Sjbobxh9QqvFFSxLdFn6Aua8Zg==
 
 react-toastify@^9.0.8:
   version "9.0.8"
