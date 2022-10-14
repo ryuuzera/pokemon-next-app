@@ -3,6 +3,7 @@ import { Stack, Typography } from '@mui/material';
 import { useEffect, useState, memo } from 'react';
 import Api from '../../api/axios';
 import styles from './PokemonList.module.css';
+import { toast } from 'react-toastify';
 
 const PokemonList = (props: any) => {
   const [objA, setObjA]: any = useState([]);
@@ -20,14 +21,14 @@ const PokemonList = (props: any) => {
       fetchPokemon(i);
     }
   }, []);
-
   return (
     <>
-      {objA.map((obj: any, id: any) => {
+      {
+      objA.map((obj: any, id: any) => {
         return (
           <Stack
-            key={obj.id}
-            id={id}
+            key={id}
+            id={id.toString()}
             className={styles.pokemonItem}
             sx={obj.name === 'mew' ? { display: props.mew ? 'normal' : 'none' } : { display: 'normal' }}
             onClick={() => alert(obj.name)}
@@ -45,7 +46,7 @@ const PokemonList = (props: any) => {
               </Stack>
             </Stack>
             <Stack className={styles.pokemonName}>
-              <Typography sx={{ fontSize: '1.2rem' }}>{`${obj.name.at(0).toUpperCase()}${obj.name.slice(
+              <Typography sx={{ fontSize: '1.2rem' }}>{`${obj.id}-${obj.name.at(0).toUpperCase()}${obj.name.slice(
                 1
               )}`}</Typography>
             </Stack>
