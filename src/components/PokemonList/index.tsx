@@ -17,9 +17,13 @@ const PokemonList = (props: any) => {
           console.log(err);
         });
     };
-    for (let i = 1; i < 152; i++) {
-      fetchPokemon(i);
+    const asyncLoop = async () => {
+      for (let i = 1; i < 152; i++) {
+        await fetchPokemon(i);
+      }
     }
+    asyncLoop();
+    
   }, []);
   return (
     <>
