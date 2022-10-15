@@ -11,7 +11,7 @@ const PokemonList = (props: any) => {
     const fetchPokemon = async (index: number) => {
       await Api.get(`/pokemon/${index}`)
         .then((response) => {
-           setObjA((objA: any) => [...objA, response.data]);
+          setObjA((objA: any) => [...objA, response.data]);
         })
         .catch((err) => {
           console.log(err);
@@ -27,7 +27,6 @@ const PokemonList = (props: any) => {
       objA.map((obj: any, id: any) => {
         return (
           <Stack
-            key={id}
             id={id.toString()}
             className={styles.pokemonItem}
             sx={obj.name === 'mew' ? { display: props.mew ? 'normal' : 'none' } : { display: 'normal' }}
