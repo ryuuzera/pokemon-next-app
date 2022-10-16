@@ -172,7 +172,7 @@ const Home = () => {
                 </Stack>
                 <img
                   src={
-                    pokemon.length > 150
+                    (pokemon.length > 150)
                       ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIndex}.png`
                       : ''
                   }
