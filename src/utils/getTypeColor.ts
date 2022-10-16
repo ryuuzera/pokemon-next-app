@@ -9,7 +9,7 @@ export const getTypeColor = (type: any) => {
     case 'water': {
       return 'rgb(82, 169, 255)';
     }
-    case 'eletric': {
+    case 'electric': {
       return 'rgb(255, 211, 77)';
     }
     case 'grass': {

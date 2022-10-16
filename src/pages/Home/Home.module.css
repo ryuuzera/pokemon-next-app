@@ -8,6 +8,31 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
+.Progress {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background: rgba(0, 0, 35, 0.8) 
+}
+
+.ProgressImg {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 35, 0.4) 
+}
+
 .Menu {
   height: 85%;
   width: 95%;

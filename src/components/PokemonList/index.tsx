@@ -28,7 +28,7 @@ const PokemonList = (props: any) => {
               </Stack>
             </Stack>
             <Stack className={styles.pokemonName}>
-              <Typography sx={{ fontSize: '1.2rem' }}>{`${obj.id}-${obj.name.at(0).toUpperCase()}${obj.name.slice(
+              <Typography sx={{ fontSize: '1.2rem' }}>{`${obj.name.at(0).toUpperCase()}${obj.name.slice(
                 1
               )}`}</Typography>
             </Stack>
