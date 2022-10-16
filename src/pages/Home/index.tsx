@@ -62,7 +62,7 @@ export const Home = () => {
           );
           fileterdTextEntries.length > 0
             ? setPokemonDesc(
-                JSON.stringify(fileterdTextEntries[0]['flavor_text']).replace(/\\n/g, '\x0a').replace(/\\f/g, '\x0a')
+                JSON.stringify(fileterdTextEntries[0].flavor_text).replace(/\\n/g, '\x0a').replace(/\\f/g, '\x0a')
               )
             : null;
         })
@@ -175,7 +175,7 @@ export const Home = () => {
                   src={
                     pokemon.length > 150
                       ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIndex}.png`
-                      : null
+                      : ''
                   }
                   alt=''
                 />
