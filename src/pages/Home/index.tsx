@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import { Box, CircularProgress, Stack, Typography } from '@mui/material';
+import { CircularProgress, Stack, Typography } from '@mui/material';
 import { Chart as ChartJS, Filler, Legend, LineElement, PointElement, RadialLinearScale, Tooltip } from 'chart.js';
 import { useEffect, useState } from 'react';
 import RadarChart from 'react-svg-radar-chart';
-// import 'react-svg-radar-chart/build/css/index.css';
 import Api from '../../api/axios';
 import { Header } from '../../components/Header';
 import PokemonList from '../../components/PokemonList';
@@ -12,7 +11,7 @@ import styles from './Home.module.css';
 
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
-export const Home = () => {
+const Home = () => {
   const AsyncImage = (props: any) => {
     const [loadedSrc, setLoadedSrc] = useState(null);
     useEffect(() => {
@@ -128,7 +127,7 @@ export const Home = () => {
   const [mew, setMew] = useState(false);
   return (
     <>
-      <Header setMew={setMew} />
+      <Header setMew={setMew} setPokemonIndex={setPokemonIndex} />
       <Stack className={styles.Container}>
         <Stack className={styles.Menu}>
           <Stack className={styles.MenuLeft}>
@@ -276,3 +275,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default Home;

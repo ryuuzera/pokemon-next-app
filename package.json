@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -13,7 +13,6 @@
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.8",
     "@mui/styled-engine-sc": "^5.10.6",
-    "@types/react-svg-radar-chart": "^1.2.3",
     "@types/uuid": "^8.3.4",
     "axios": "^1.1.2",
     "chart.js": "^3.9.1",

@@ -20,6 +20,7 @@ export const Header = (props: any) => {
       progress: undefined,
       theme: "dark",
       });
+    props.setPokemonIndex(151);
   }
   return (
     <>
