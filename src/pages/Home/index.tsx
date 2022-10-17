@@ -251,7 +251,7 @@ const Home = () => {
           }
           .caption {
             fill: rgba(226, 219, 199, 0.9);
-            font-size: 1.25rem;
+            font-size: 1rem;
             font-weight: 300;
           }
           #infoOne {
